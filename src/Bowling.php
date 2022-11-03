@@ -1,12 +1,14 @@
 <?php
-
+namespace APP;
 class Bowling {
-    
-    public function newThrow ($pinsNbr)
+    private static int $score=0;
+    public function newThrow (int $pinsNbr) :void
     {
+        self::$score+=$pinsNbr;
+       
     }
-
-    public function getCurrentScore ()
+    public function getCurrentScore () :int
     {
+        return self::$score;
     }
 }
